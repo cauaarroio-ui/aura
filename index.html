@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvendando a Física e a Óptica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Gerais e Fontes */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcfcfc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            display: inline-block;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+            font-family: 'Lato', sans-serif;
+        }
+
+        nav button:hover {
+            background-color: #1abc9c;
+        }
+
+        nav button.active {
+            background-color: #1abc9c;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* CONTROLADORES DAS ABAS/PÁGINAS */
+        .aba-conteudo {
+            display: none;
+        }
+
+        .aba-conteudo.active {
+            display: block;
+        }
+
+        .section {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        /* Estilização padrão para todas as imagens do site */
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .highlight-box {
+            background-color: #f0f4f8;
+            border-left: 4px solid #1abc9c;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        footer {
+            background-color: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="header-titulo">Desvendando a Óptica</h1>
+        <p id="header-subtitulo">Explore os mistérios da luz, das cores e da visão</p>
+    </header>
+
+    <nav>
+        <button onclick="mudarAba('optica')" id="btn-optica" class="active">Conteúdo de Óptica</button>
+        <button onclick="mudarAba('trionda')" id="btn-trionda">Projeto Trionda</button>
+    </nav>
+
+    <div class="container">
+
+        <div id="aba-optica" class="aba-conteudo active">
+            <section id="inicio" class="section">
+                <h2>Bem-vindo ao mundo da luz!</h2>
+                <p>A óptica é a parte da Física que estuda a luz e os fenômenos associados a ela. Navegue pelo menu acima para descobrir como enxergamos o mundo, como os espelhos funcionam e o que realmente são as cores.</p>
+            </section>
+
+            <section id="espelhos" class="section">
+                <h2>O Fenômeno da Reflexão</h2>
+                <p>A reflexão acontece quando a luz atinge uma superfície e volta para o meio de onde veio. É graças a isso que conseguimos enxergar as coisas ao nosso redor.</p>
+                
+                <img src="https://www.shutterstock.com/image-vector/visible-light-diagram-color-electromagnetic-260nw-1202562649.jpg" alt="Diagrama de luz visível">
+                
+                <h3>Tipos de Espelhos</h3>
+                <ul>
+                    <li><strong>Espelhos Planos:</strong> Formam imagens de mesmo tamanho e na mesma distância do objeto.</li>
+                    <li><strong>Espelhos Côncavos:</strong> Curvados para dentro (como o fundo de uma colher). Podem ampliar a imagem.</li>
+                    <li><strong>Espelhos Convexos:</strong> Curvados para fora (como a parte de trás da colher). Ampliam o campo de visão, diminuindo o tamanho dos objetos.</li>
+                </ul>
+            </section>
+
+            <section id="imagens" class="section">
+                <h2>Como as imagens se formam?</h2>
+                <p>A formação de imagens ocorre quando os raios de luz que saem de um objeto passam por lentes ou batem em espelhos e se cruzam (ou parecem se cruzar) em um ponto do espaço.</p>
+                
+                <img src="https://i0.wp.com/cref.if.ufrgs.br/wp-content/uploads/2021/09/espelho_convexo.png?fit=1200%2C799&ssl=1" alt="Formação de imagem real e virtual">
+
+                <h3>Imagens Reais vs. Virtuais</h3>
+                <p><strong>Imagem Real:</strong> É formada pelo cruzamento real dos raios de luz e pode ser projetada em uma tela (como no cinema).</p>
+                <p><strong>Imagem Virtual:</strong> É formada pelo prolongamento dos raios. Não pode ser projetada, nós a vemos apenas olhando através da lente ou espelho.</p>
+            </section>
+
+            <section id="cores" class="section">
+                <h2>A Luz e suas Cores</h2>
+                <p>A luz branca do Sol, na verdade, é a mistura de todas as cores do arco-íris. Quando essa luz atravessa um prisma, ela se divide em vermelho, laranja, amarelo, verde, azul, anil e violeta. Esse fenômeno é a <strong>dispersão da luz</strong>.</p>
+                
+                <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2024/03/decomposicao-luz-branca.jpg" alt="Luz branca passando por um prisma">
+
+                <h3>Por que os objetos têm cor?</h3>
+                <p>Um objeto parece vermelho porque ele **absorve** todas as outras cores da luz e **reflete** apenas a luz vermelha de volta para os nossos olhos. Um objeto branco reflete todas as cores, enquanto um objeto preto absorve todas elas.</p>
+            </section>
+
+            <section id="olho" class="section">
+                <h2>O Olho como uma Câmera</h2>
+                <p>O olho humano funciona de forma parecida com uma câmera fotográfica. Ele possui lentes naturais (como a córnea e o cristalino) que focam a luz diretamente na <strong>retina</strong>, que funciona como o sensor de imagem.</p>
+                
+                <img src="https://static.todamateria.com.br/upload/ol/ho/olhohumano-cke.jpg" alt="Diagrama do olho humano">
+
+                <h3>Curiosidade: Imagem Invertida</h3>
+                <p>Você sabia que a imagem que se forma na nossa retina é totalmente **de ponta-cabeça**? O nosso cérebro é o responsável por inverter a imagem para que vejamos o mundo na posição correta!</p>
+            </section>
+
+            <section id="quiz" class="section">
+                <h3>⚡ Desafio Rápido de Óptica</h3>
+                <p>O que acontece de fato com a luz branca quando ela atravessa um prisma de vidro?</p>
+                
+                <button onclick="verificarResposta(false)" style="padding: 10px 15px; margin: 5px; cursor: pointer; border: 1px solid #ddd; background: #f8f9fa; font-weight: bold; border-radius: 4px; color: #333;">Ela é totalmente absorvida e vira sombra.</button>
+                <button onclick="verificarResposta(true)" style="padding: 10px 15px; margin: 5px; cursor: pointer; border: 1px solid #ddd; background: #f8f9fa; font-weight: bold; border-radius: 4px; color: #333;">Ela se decompõe e se divide nas cores do arco-íris.</button>
+                <button onclick="verificarResposta(false)" style="padding: 10px 15px; margin: 5px; cursor: pointer; border: 1px solid #ddd; background: #f8f9fa; font-weight: bold; border-radius: 4px; color: #333;">Ela se transforma em raios laser invisíveis.</button>
+                
+                <p id="resultado-quiz" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+            </section>
+        </div>
+
+        <div id="aba-trionda" class="aba-conteudo">
+            <section class="section">
+                <h2>Introdução ao Projeto Trionda</h2>
+                <p>O <strong>Projeto Trionda</strong> analisa como três forças ou propriedades físicas fundamentais agem em conjunto para ditar o comportamento mecânico e aerodinâmico de um corpo em movimento. No futebol profissional, a bola da Copa do Mundo é o ápice da engenharia física, onde pequenas variações em sua estrutura alteram completamente sua trajetória através do ar.</p>
+                
+                <img src="CAMINHO_DA_TUA_FOTO_DA_BOLA.jpg" alt="Bola da Copa do Mundo - Aerodinâmica">
+            </section>
+
+            <section class="section">
+                <h2>A Física por Trás da Bola</h2>
+                <p>Quando um jogador chuta a bola, ela não está apenas sujeita à gravidade. O ar exerce uma influência massiva em seu percurso através de três conceitos fundamentais:</p>
+                
+                <div class="highlight-box">
+                    <h3>1. O Efeito Magnus (A Física da Curva)</h3>
+                    <p>Quando a bola viaja girando no próprio eixo, ela arrasta o ar ao seu redor. Isso faz com que o ar se mova mais rápido de um lado do que do outro. Onde o ar corre mais rápido, a pressão diminui, criando uma força lateral que empurra a bola, gerando a famosa trajetória em curva.</p>
+                    
+                    <img src="https://s1.static.brasilescola.uol.com.br/img/2018/06/esquema-forca-magnus.jpg" alt="Explicação visual do Efeito Magnus">
+                </div>
+
+                <div class="highlight-box">
+                    <h3>2. Camada Limite e Rugosidade (A Importância da Textura)</h3>
+                    <p>Uma bola perfeitamente lisa cria uma zona de turbulência caótica atrás de si, o que a faz "dançar" no ar (como acontecia com a bola <em>Jabulani</em> em 2010). As bolas modernas possuem micro-ranhuras e gomos com texturas rugosas para estabilizar o fluxo de ar.</p>
+                    
+                    <img src="https://s2-galileu.glbimg.com/6PZjXfdRjLFreRWXIUNp8M7SszU=/0x0:554x554/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_fde5cd494fb04473a83fa5fd57ad4542/internal_photos/bs/2026/O/9/yG0sSZRhumMkdCoSo7yw/trionda.png" alt="Detalhe dos gomos e texturas da bola">
+                </div>
+
+                <div class="highlight-box">
+                    <h3>3. Força de Arrasto (A Resistência do Ar)</h3>
+                    <p>O arrasto é a força de resistência oposta ao movimento da bola. O design atual de gomos soldados termicamente busca minimizar esse arrasto para que a bola mantenha sua velocidade constante por mais tempo.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Propriedades Físicas da Bola</h2>
+                <p>Para obter a aprovação da FIFA, a bola da Copa deve equilibrar perfeitamente três propriedades físicas essenciais:</p>
+                <ul>
+                    <li><strong>Esfericidade Perfeita (Geometria):</strong> Evita desvios inesperados causados por imperfeições na superfície.</li>
+                    <li><strong>Massa Padronizada (Inércia):</strong> Nem tão leve para sofrer com rajadas de vento, nem tão pesada para diminuir a velocidade do jogo.</li>
+                    <li><strong>Frequência de Rotação (Velocidade Angular):</strong> O número de voltas por segundo dita a intensidade da curva através do Efeito Magnus.</li>
+                </ul>
+            </section>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Website de Óptica e Física Escolar</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

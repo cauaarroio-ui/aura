@@ -1,0 +1,126 @@
+/* ==========================================
+   Estilos Gerais e Tipografia
+   ========================================== */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Um cinza claro mais moderno e confortável para leitura */
+    color: #2c3e50; /* Azul escuro acinzentado, menos agressivo que o preto puro */
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%); /* Gradiente sutil */
+    color: white;
+    text-align: center;
+    padding: 3.5rem 1rem;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1a252f;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================
+   Navegação (Menu Fixo)
+   ========================================== */
+nav {
+    background-color: #1a252f; /* Unificando o tom escuro principal */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para destacar o menu sobre o conteúdo */
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 18px 24px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease; /* Transição suave para cores e fundos */
+}
+
+nav a:hover {
+    background-color: #1abc9c;
+    color: #1a252f; /* Texto escuro no hover para garantir contraste e acessibilidade */
+}
+
+/* ==========================================
+   Layout e Conteúdo (Container)
+   ========================================== */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem 4rem 2rem;
+}
+
+.section {
+    padding: 4rem 0 2rem 0; /* Aumentado para dar respiro entre os temas */
+    border-bottom: 1px solid #e2e8f0;
+    
+    /* SOLUÇÃO: Evita que o menu fixo de 60px cubra o título ao clicar nos links */
+    scroll-margin-top: 58px; 
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+/* Listas estilizadas */
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+/* Imagens */
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    border-radius: 8px; /* Cantos um pouco mais arredondados */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra suave de profundidade */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito sutil ao passar o mouse na imagem */
+img:hover {
+    transform: scale(1.01); 
+}
+
+/* ==========================================
+   Rodapé
+   ========================================== */
+footer {
+    background-color: #1a252f;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    border-top: 3px solid #1abc9c; /* Detalhe colorido no topo do rodapé */
+}
